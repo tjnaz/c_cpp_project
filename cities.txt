@@ -1,0 +1,126 @@
+Colombo,Kandy,116
+Colombo,Galle,129
+Colombo,Jaffna,396
+Colombo,Anuradhapura,206
+Colombo,Nuwara Eliya,180
+Colombo,Polonnaruwa,228
+Colombo,Trincomalee,266
+Colombo,Batticaloa,314
+Colombo,Matara,160
+Colombo,Badulla,225
+Colombo,Kurunegala,94
+Colombo,Ratnapura,101
+Colombo,Kegalle,78
+Colombo,Kalutara,43
+Colombo,Hambantota,238
+Colombo,Vavuniya,254
+Colombo,Gampaha,28
+Colombo,Puttalam,133
+Colombo,Matale,155
+Colombo,Ampara,370
+Colombo,Monaragala,244
+Colombo,Mannar,324
+Colombo,Mullaitivu,349
+Colombo,Kilinochchi,331
+Colombo,Haputale,195
+Colombo,Bandarawela,218
+Colombo,Dambulla,148
+Colombo,Negombo,37
+Colombo,Chilaw,83
+Kandy,Galle,230
+Kandy,Jaffna,309
+Kandy,Anuradhapura,128
+Kandy,Nuwara Eliya,76
+Kandy,Polonnaruwa,145
+Kandy,Trincomalee,182
+Kandy,Batticaloa,230
+Kandy,Matara,240
+Kandy,Badulla,150
+Kandy,Kurunegala,72
+Kandy,Ratnapura,137
+Kandy,Kegalle,62
+Kandy,Kalutara,153
+Kandy,Hambantota,318
+Kandy,Vavuniya,129
+Kandy,Gampaha,102
+Kandy,Puttalam,137
+Kandy,Matale,26
+Kandy,Ampara,278
+Kandy,Monaragala,192
+Kandy,Mannar,272
+Kandy,Mullaitivu,297
+Kandy,Kilinochchi,279
+Kandy,Haputale,124
+Kandy,Bandarawela,147
+Kandy,Dambulla,72
+Kandy,Negombo,95
+Kandy,Chilaw,141
+Galle,Matara,39
+Galle,Badulla,206
+Galle,Kurunegala,179
+Galle,Ratnapura,114
+Galle,Kegalle,155
+Galle,Kalutara,96
+Galle,Hambantota,114
+Galle,Vavuniya,390
+Galle,Gampaha,141
+Galle,Puttalam,228
+Galle,Matale,230
+Galle,Ampara,314
+Galle,Monaragala,212
+Galle,Mannar,410
+Galle,Mullaitivu,435
+Galle,Kilinochchi,417
+Galle,Haputale,281
+Galle,Bandarawela,304
+Galle,Dambulla,227
+Galle,Negombo,179
+Galle,Chilaw,223
+Anuradhapura,Polonnaruwa,104
+Anuradhapura,Trincomalee,182
+Anuradhapura,Batticaloa,233
+Anuradhapura,Matara,335
+Anuradhapura,Badulla,245
+Anuradhapura,Kurunegala,89
+Anuradhapura,Ratnapura,202
+Anuradhapura,Kegalle,183
+Anuradhapura,Kalutara,249
+Anuradhapura,Hambantota,413
+Anuradhapura,Vavuniya,64
+Anuradhapura,Gampaha,208
+Anuradhapura,Puttalam,135
+Anuradhapura,Matale,153
+Anuradhapura,Ampara,373
+Anuradhapura,Monaragala,287
+Anuradhapura,Mannar,129
+Anuradhapura,Mullaitivu,237
+Anuradhapura,Kilinochchi,219
+Anuradhapura,Haputale,321
+Anuradhapura,Bandarawela,344
+Anuradhapura,Dambulla,64
+Anuradhapura,Negombo,201
+Anuradhapura,Chilaw,185
+Nuwara Eliya,Polonnaruwa,222
+Nuwara Eliya,Trincomalee,258
+Nuwara Eliya,Batticaloa,306
+Nuwara Eliya,Matara,201
+Nuwara Eliya,Badulla,74
+Nuwara Eliya,Kurunegala,146
+Nuwara Eliya,Ratnapura,121
+Nuwara Eliya,Kegalle,132
+Nuwara Eliya,Kalutara,223
+Nuwara Eliya,Hambantota,279
+Nuwara Eliya,Vavuniya,295
+Nuwara Eliya,Gampaha,152
+Nuwara Eliya,Puttalam,257
+Nuwara Eliya,Matale,101
+Nuwara Eliya,Ampara,342
+Nuwara Eliya,Monaragala,216
+Nuwara Eliya,Mannar,365
+Nuwara Eliya,Mullaitivu,390
+Nuwara Eliya,Kilinochchi,372
+Nuwara Eliya,Haputale,47
+Nuwara Eliya,Bandarawela,70
+Nuwara Eliya,Dambulla,168
+Nuwara Eliya,Negombo,192
+Nuwara Eliya,Chilaw,238
