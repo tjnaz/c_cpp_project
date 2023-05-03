@@ -34,14 +34,14 @@ struct City {
   int index;
 };
 
-// int find_city_index(const vector<City> &cities, const string &city_name) {
-//   for (const auto &city : cities) {
-//     if (city.name == city_name) {
-//       return city.index;
-//     }
-//   }
-//   return -1;
-// }
+int find_city_index(const vector<City> &cities, const string &city_name) {
+  for (const auto &city : cities) {
+    if (city.name == city_name) {
+      return city.index;
+    }
+  }
+  return -1;
+}
 
 int main() {
   ifstream input_file("cities.txt");
@@ -65,8 +65,8 @@ int main() {
     ss >> distance;
     cout << city1 << "-" << city2 << ":" << distance << "\n";
 
-    // int index1 = find_city_index(cities, city1);
-    // int index2 = find_city_index(cities, city2);
+    int index1 = find_city_index(cities, city1);
+    int index2 = find_city_index(cities, city2);
 
     // if (index1 == -1) {
     //   index1 = cities.size();
@@ -74,5 +74,15 @@ int main() {
     //   distance_matrix.push_back(vector<int>(100, 0)); // no more than 100
     //   cities
     // }
+
+    // if (index2 == -1) {
+    //   index2 = cities.size();
+    //   cities.push_back({city2, index2});
+    //   distance_matrix.push_back(vector<int>(100, 0)); // no more than 100
+    //   cities
+    // }
+
+    distance_matrix[index1][index2] = distance;
+    distance_matrix[index1][index2] = distance;
   }
 }
