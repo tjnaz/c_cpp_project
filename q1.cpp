@@ -47,7 +47,7 @@ int main() {
   ifstream input_file("cities.txt");
 
   if (!input_file) {
-    cerr << "Error opening file 'cities.txt'." << endl;
+    cerr << "Error opening file 'cities.txt'." << endl; // better than "\n"??
     return -1;
   }
 
