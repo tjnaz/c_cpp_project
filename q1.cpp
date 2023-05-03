@@ -63,26 +63,36 @@ int main() {
     getline(ss, city1, ',');
     getline(ss, city2, ',');
     ss >> distance;
-    cout << city1 << "-" << city2 << ":" << distance << "\n";
+    // cout << city1 << "-" << city2 << ":" << distance << "\n";
 
     int index1 = find_city_index(cities, city1);
     int index2 = find_city_index(cities, city2);
 
-    // if (index1 == -1) {
-    //   index1 = cities.size();
-    //   cities.push_back({city1, index1});
-    //   distance_matrix.push_back(vector<int>(100, 0)); // no more than 100
-    //   cities
-    // }
+    if (index1 == -1) {
+      index1 = cities.size();
+      cities.push_back({city1, index1});
+      distance_matrix.push_back(vector<int>(100, 0)); // no more than 100 cities
+    }
 
-    // if (index2 == -1) {
-    //   index2 = cities.size();
-    //   cities.push_back({city2, index2});
-    //   distance_matrix.push_back(vector<int>(100, 0)); // no more than 100
-    //   cities
-    // }
+    if (index2 == -1) {
+      index2 = cities.size();
+      cities.push_back({city2, index2});
+      distance_matrix.push_back(vector<int>(100, 0)); // no more than 100 cities
+    }
 
     distance_matrix[index1][index2] = distance;
     distance_matrix[index1][index2] = distance;
   }
+
+  input_file.close();
+
+  for (int i = 0; i < cities.size(); i++) {
+    for (int j = i + 1; j < cities.size(); j++) {
+      int dist = distance_matrix[i][j];
+      cout << cities[i].name << " to " << cities[j].name << ": " << dist
+           << endl;
+    }
+  }
+
+  return 0;
 }
