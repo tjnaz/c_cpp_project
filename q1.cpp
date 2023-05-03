@@ -43,6 +43,26 @@ int find_city_index(const vector<City> &cities, const string &city_name) {
   return -1;
 }
 
+int Distance(const vector<City> &cities,
+             const vector<vector<int>> &distance_matrix,
+             const string &city1_name, const string &city2_name) {
+  int city1_index = find_city_index(cities, city1_name);
+  int city2_index = find_city_index(cities, city2_name);
+
+  if (city1_index == -1 || city2_index == -1) {
+    // Either city1 or city2 was not found in the cities vector
+    return -1;
+  }
+
+  int distance = distance_matrix[city1_index][city2_index];
+  if (distance == 0) {
+    // The cities are not connected
+    return -1;
+  }
+
+  return distance;
+}
+
 int main() {
   ifstream input_file("cities.txt");
 
@@ -86,14 +106,35 @@ int main() {
 
   input_file.close();
 
-  for (int i = 0; i < cities.size(); i++) {
-    for (int j = i + 1; j < cities.size(); j++) {
-      int dist = distance_matrix[i][j];
-      if (dist > 0) {
-        cout << cities[i].name << " to " << cities[j].name << ": " << dist
-             << endl;
-      }
-    }
+  // for (int i = 0; i < cities.size(); i++) {
+  //   for (int j = i + 1; j < cities.size(); j++) {
+  //     int dist = distance_matrix[i][j];
+  //     if (dist > 0) {
+  //       cout << cities[i].name << " to " << cities[j].name << ": " << dist
+  //            << endl;
+  //     }
+  //   }
+  // }
+
+  // fixed city names at the start of the program
+  // string city1_name = "Colombo";
+  // string city2_name = "Galle";
+
+  // from the user input
+  string city1_name, city2_name;
+
+  cout << "Enter the name of the City 1: ";
+  getline(cin, city1_name);
+  cout << "Enter the name of the City 2: ";
+  getline(cin, city2_name);
+
+  int distance = Distance(cities, distance_matrix, city1_name, city2_name);
+  if (distance == -1) {
+    cout << "Error: " << city1_name << " and " << city2_name
+         << " are not connected." << endl;
+  } else {
+    cout << "Distance between " << city1_name << " and " << city2_name << " is "
+         << distance << "." << endl;
   }
 
   return 0;
