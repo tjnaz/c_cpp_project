@@ -89,8 +89,10 @@ int main() {
   for (int i = 0; i < cities.size(); i++) {
     for (int j = i + 1; j < cities.size(); j++) {
       int dist = distance_matrix[i][j];
-      cout << cities[i].name << " to " << cities[j].name << ": " << dist
-           << endl;
+      if (dist > 0) {
+        cout << cities[i].name << " to " << cities[j].name << ": " << dist
+             << endl;
+      }
     }
   }
 
