@@ -43,6 +43,7 @@ int find_city_index(const vector<City> &cities, const string &city_name) {
   return -1;
 }
 
+// find the distance between two cities
 int Distance(const vector<City> &cities,
              const vector<vector<int>> &distance_matrix,
              const string &city1_name, const string &city2_name) {
@@ -61,6 +62,41 @@ int Distance(const vector<City> &cities,
   }
 
   return distance;
+}
+
+int Shortest(const vector<City> &cities,
+             const vector<vector<int>> &distance_matrix,
+             const string &city_name, string &closest_city_name) {
+  int city_index = find_city_index(cities, city_name);
+
+  if (city_index == -1) {
+    return -1;
+  }
+
+  int min_distance = -1;
+  int closest_city_index = -1;
+  for (int i = 0; i < cities.size(); i++) {
+    if (i == city_index) {
+      continue;
+    }
+
+    int distance = distance_matrix[city_index][i];
+    if (distance == 0) {
+      continue;
+    }
+
+    if (min_distance == -1 || distance < min_distance) {
+      min_distance = distance;
+      closest_city_index = i;
+    }
+  }
+
+  if (closest_city_index == -1) {
+    return -1;
+  }
+
+  closest_city_name = cities[closest_city_index].name;
+  return min_distance;
 }
 
 int main() {
@@ -120,9 +156,11 @@ int main() {
   // string city1_name = "Colombo";
   // string city2_name = "Galle";
 
+  // take the input of two cities to find the distance between them
   // from the user input
   string city1_name, city2_name;
 
+  cout << "Find the distancee between two cities - ";
   cout << "Enter the name of the City 1: ";
   getline(cin, city1_name);
   cout << "Enter the name of the City 2: ";
@@ -135,6 +173,23 @@ int main() {
   } else {
     cout << "Distance between " << city1_name << " and " << city2_name << " is "
          << distance << "." << endl;
+  }
+
+  // Takee the input for finding the closest city
+  cout << "Find the closest city - ";
+  string city_name;
+  cout << "Enter the name of the city: ";
+  getline(cin, city_name);
+
+  string closest_city_name;
+  int closestDistance =
+      Shortest(cities, distance_matrix, city_name, closest_city_name);
+
+  if (closestDistance == -1) {
+    cout << "No such city";
+  } else {
+    cout << "Closest city to " << city_name << " is " << closest_city_name
+         << " with a distance of " << closestDistance << endl;
   }
 
   return 0;
