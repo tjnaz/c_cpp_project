@@ -25,6 +25,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <utility>
 #include <vector>
 
 using namespace std;
@@ -64,6 +65,8 @@ int Distance(const vector<City> &cities,
   return distance;
 }
 
+// Find the shoretest distance to the give city and output the distance with the
+// closest city
 int Shortest(const vector<City> &cities,
              const vector<vector<int>> &distance_matrix,
              const string &city_name, string &closest_city_name) {
@@ -97,6 +100,53 @@ int Shortest(const vector<City> &cities,
 
   closest_city_name = cities[closest_city_index].name;
   return min_distance;
+}
+
+// Find two cities with the equal distant to the given city
+void Equidistance(const vector<City> &cities,
+                  const vector<vector<int>> &distance_matrix,
+                  const string &city_name) {
+  int city_index = find_city_index(cities, city_name);
+  if (city_index == -1) {
+    cout << "City nod found!" << endl;
+    return;
+  }
+
+  vector<pair<string, string>> equidistant_cities;
+  for (int i = 0; i < cities.size(); i++) {
+    if (i == city_index) {
+      continue;
+    }
+
+    int distance = distance_matrix[city_index][i];
+    if (distance == 0) {
+      continue;
+    }
+
+    for (int j = i + 1; j < cities.size(); j++) {
+      if (j == city_index) {
+        continue;
+      }
+
+      int second_distance = distance_matrix[city_index][j];
+      if (second_distance == 0) {
+        continue;
+      }
+
+      if (distance == second_distance) {
+        equidistant_cities.push_back(make_pair(cities[i].name, cities[j].name));
+      }
+    }
+  }
+
+  if (equidistant_cities.empty()) {
+    cout << "No equidistant city found";
+  } else {
+    cout << "Equidistant cities to " << city_name << " are:" << endl;
+    for (auto &pair : equidistant_cities) {
+      cout << pair.first << " and " << pair.second << endl;
+    }
+  }
 }
 
 int main() {
@@ -175,8 +225,9 @@ int main() {
          << distance << "." << endl;
   }
 
-  // Takee the input for finding the closest city
-  cout << "Find the closest city - ";
+  // Takee the input for finding the closest city + equidistant cities
+  cout << "Find the closest city as well as the two cities with the equal "
+          "distance- ";
   string city_name;
   cout << "Enter the name of the city: ";
   getline(cin, city_name);
@@ -191,6 +242,12 @@ int main() {
     cout << "Closest city to " << city_name << " is " << closest_city_name
          << " with a distance of " << closestDistance << endl;
   }
+
+  // for ease of use the program will find the Equidistance cities for the city
+  // entered above NOTE: gonna have to make sure there are two cities with the
+  // same distance to  Colombo
+
+  Equidistance(cities, distance_matrix, city_name);
 
   return 0;
 }
