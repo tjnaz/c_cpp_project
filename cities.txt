@@ -3,7 +3,7 @@ Colombo,Galle,129
 Colombo,Jaffna,396
 Colombo,Anuradhapura,206
 Colombo,Nuwara Eliya,180
-Colombo,Polonnaruwa,228
+Colombo,Polonnaruwa,266
 Colombo,Trincomalee,266
 Colombo,Batticaloa,314
 Colombo,Matara,160
